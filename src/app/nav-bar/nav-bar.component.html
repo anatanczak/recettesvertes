@@ -1,1 +1,17 @@
+<div>
+  <div>
+    <label for="recipeTitle">Recipe Title: </label>
+    <input type="text" id="recipeTitle" #recipeTitle />
+  </div>
+  <div>
+    <label for="recipeShortDescription">Recipe Short Description: </label>
+    <textarea
+      name=""
+      id="recipeShortDescription"
+      cols="30"
+      rows="5"
+      #RecipeShortDescription
+    ></textarea>
+  </div>
+</div>
 <button (click)="onAddRecipe()">Add recipe</button>

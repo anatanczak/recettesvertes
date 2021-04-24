@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import RecipeThumbnail from './recipeInterface';
+import { RecipeService } from '../recipes.service';
+import Recipe from './recipeInterface';
 
 @Component({
   selector: 'app-recipes',
@@ -7,9 +8,11 @@ import RecipeThumbnail from './recipeInterface';
   styleUrls: ['./recipes.component.scss'],
 })
 export class RecipesComponent implements OnInit {
-  @Input() recipeThumbnails: Array<RecipeThumbnail>;
+  recipes: Array<Recipe> = [];
 
-  constructor() {}
+  constructor(private recipesService: RecipeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.recipes = this.recipesService.recipes;
+  }
 }

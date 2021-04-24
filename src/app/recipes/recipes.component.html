@@ -1,7 +1,7 @@
 <div class="RecipesContainer">
   <app-recipe-thumbnail
-    *ngFor="let recipeThumbnail of recipeThumbnails; let ind = index"
-    [recipeThumbnail]="recipeThumbnail"
+    *ngFor="let recipe of recipes; let ind = index"
+    [recipeThumbnail]="recipe"
   ></app-recipe-thumbnail>
   <p></p>
 </div>
